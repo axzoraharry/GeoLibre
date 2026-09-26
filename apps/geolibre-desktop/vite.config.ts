@@ -274,6 +274,8 @@ export default defineConfig({
     host: true,
     port: 5173,
     strictPort: true,
+    // Cloud Agent preview URLs use *.cursorvm.com hostnames.
+    allowedHosts: [".cursorvm.com"],
   },
   worker: {
     format: "es",
