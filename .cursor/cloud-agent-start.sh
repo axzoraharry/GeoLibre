@@ -17,7 +17,7 @@ tmux -f /exec-daemon/tmux.portal.conf new-session -d -s "${SESSION_NAME}" -c /wo
 
 for _ in $(seq 1 60); do
   if curl -sf "http://localhost:${PORT}/" >/dev/null 2>&1; then
-    echo "GeoLibre dev server ready at http://localhost:${PORT}/"
+    echo "GeoLibre dev server ready at http://localhost:${PORT}/ (network: http://0.0.0.0:${PORT}/)"
     exit 0
   fi
   sleep 2
