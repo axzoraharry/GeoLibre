@@ -271,6 +271,7 @@ export default defineConfig({
     __GEOLIBRE_VERSION__: JSON.stringify(APP_VERSION),
   },
   server: {
+    host: true,
     port: 5173,
     strictPort: true,
   },
